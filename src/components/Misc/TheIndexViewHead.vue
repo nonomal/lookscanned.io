@@ -4,38 +4,33 @@
       <ScannerSvg style="width: 100%" />
     </div>
 
-    <n-h1>{{ t("base.title") }}</n-h1>
+    <n-h1>{{ t('base.title') }}</n-h1>
     <n-p style="max-width: 568px">
-      {{ t("base.description") }}
+      {{ t('base.description') }}
     </n-p>
 
+    <NavigateToScan />
+
     <n-grid :x-gap="20" :y-gap="0" :cols="2">
-      <n-grid-item>
-        <NavigateToScan />
-      </n-grid-item>
       <n-grid-item>
         <NavigateToGitHub />
       </n-grid-item>
       <n-grid-item>
-        <NavigateToHomePage />
-      </n-grid-item>
-      <n-grid-item>
-        <NavigateToSupportMe />
+        <NavigateToInBrowserApp />
       </n-grid-item>
     </n-grid>
   </n-space>
 </template>
 
 <script setup lang="ts">
-import { NH1, NP, NSpace, NGrid, NGridItem } from "naive-ui";
-import NavigateToScan from "@/components/buttons/NavigateToScan.vue";
-import NavigateToGitHub from "@/components/buttons/NavigateToGitHub.vue";
-import NavigateToHomePage from "@/components/buttons/NavigateToHomePage.vue";
-import NavigateToSupportMe from "@/components/buttons/NavigateToSupportMe.vue";
+import { NH1, NP, NSpace, NGrid, NGridItem } from 'naive-ui'
+import NavigateToScan from '@/components/buttons/NavigateToScan.vue'
+import NavigateToGitHub from '@/components/buttons/NavigateToGitHub.vue'
+import NavigateToInBrowserApp from '@/components/buttons/NavigateToInBrowserApp.vue'
 
-import { useI18n } from "vue-i18n";
+import { useI18n } from 'vue-i18n'
 
-import ScannerSvg from "./ScannerSvg.vue";
+import ScannerSvg from './ScannerSvg.vue'
 
-const { t } = useI18n();
+const { t } = useI18n()
 </script>
